@@ -1,0 +1,56 @@
+.countdown {
+  padding: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(106, 155, 74, 0.849),
+      rgba(38, 60, 37, 0.897)
+    ),
+    url('/interval.jpg');
+
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0;
+    color: var(--text-primary);
+    font-size: 1.5em;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.clock {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media screen and (min-width: 768px) {
+    width: 70%;
+  }
+}
+
+.clock section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock section p {
+  font-size: 1.2em;
+  color: var(--text-primary);
+
+  @media screen and (min-width: 768px) {
+    font-size: 2em;
+  }
+}
+
+.clock section small {
+  color: var(--text-primary);
+  text-shadow: none;
+}

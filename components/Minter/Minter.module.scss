@@ -1,0 +1,145 @@
+@mixin buttonStyle {
+  display: inline-block;
+  height: 54px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 17px 20px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
+    margin: -20px;
+    animation: wallet-animate 1s infinite;
+  }
+
+  @keyframes wallet-animate {
+    0% {
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.26);
+    }
+    100% {
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.minter {
+  padding: 0 5px;
+
+  ._title {
+    text-align: center;
+  }
+
+  ._card {
+    width: 500px;
+    margin: 0 auto;
+    background: hsl(240deg 7% 97% / 14%);
+    color: #fff;
+
+    @media screen and (max-width: 599px) {
+      width: 95%;
+    }
+
+    ._card_content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 300px;
+      h6 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #f2f850;
+      }
+      p {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 15px 0;
+      }
+      button {
+        @include buttonStyle;
+        color: #fff;
+      }
+      input {
+        border: 2px solid red; 
+        border-radius: 4px;
+        background-color: #3CBC8D; 
+        color: white;
+        display: flex; 
+        width: 150px;
+      }
+
+    }
+  }
+
+  ._connect_wallet {
+    display: flex;
+    flex: 2 1 0%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    ._title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.6;
+      color: var(--headline-color);
+
+      @media screen and (max-width: 599px) {
+        font-size: 30px;
+      }
+    }
+
+    .wallet_btn {
+      @include buttonStyle;
+    }
+
+    ._subtitle {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.6;
+      // font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+
+    .transaction_details {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      text-align: center;
+
+      span {
+        color: var(--headline-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.footer {
+  background-color: var(--bg-color-primary);
+  color: var(--text-primary);
+  padding: 20px 0;
+
+  @media screen and (min-width: 900px) {
+    padding: 0;
+  }
+
+  ._spacing {
+    gap: 20px;
+
+    @media screen and (min-width: 900px) {
+      gap: 0px;
+    }
+  }
+
+  ._logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 900px) {
+      justify-content: flex-start;
+    }
+  }
+
+  ._social_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    ._social_icon {
+      height: 30px;
+      width: 30px;
+      color: var(--nav-link-color);
+    }
+  }
+}

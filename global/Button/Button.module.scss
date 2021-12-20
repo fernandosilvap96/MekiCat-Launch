@@ -1,0 +1,11 @@
+.button {
+  display: inline-block;
+  background-color: var(--button-color-primary);
+  padding: 17px 20px;
+  height: 54px;
+  font-weight: 500;
+
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
+}
