@@ -124,7 +124,7 @@ const Minter = () => {
               </form>
               <hr />
               {minted ? (
-                <a target="_blank" href="https://testnets.opensea.io/collection/mekicats-test-v3">LINK TO OPENSEA</a>
+                <a href="https://testnets.opensea.io/collection/mekicats-test-v3">LINK TO OPENSEA</a>
               ) : (
                 <div>Awaiting to mint...</div>
               )}
